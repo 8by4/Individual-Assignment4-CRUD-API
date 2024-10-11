@@ -55,7 +55,7 @@ public class AnimalController {
 
     /**
      * Get a list of Animals based on their name with a string.
-     * http://localhost:8080/animals?search=blue
+     * http://localhost:8080/animals/search?string=blue
      *
      * @param search the search key.
      * @return A list of Animal objects matching the string search key.

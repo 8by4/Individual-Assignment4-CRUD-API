@@ -46,6 +46,13 @@ public class AnimalService {
         return animalRepository.getAnimalsBySpecies(species);
     }
 
+
+    /**
+     * Fetch all animals whose species matches the search term.
+     *
+     * @param string is the search key.
+     * @return the list of matching Animals with names containing the string.
+     */
     public List<Animal> getAnimalsByString(String string) {
         return animalRepository.findByNameContaining(string);
     }

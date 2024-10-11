@@ -8,7 +8,6 @@ public class Animal {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "animal_id")
     private int animalId;
 
     @Column(name = "name", nullable = false)
@@ -83,7 +82,7 @@ public class Animal {
     }
 
     public void setHabitat(String habitat) {
-        this.species = species;
+        this.habitat = habitat;
     }
 
     public String getDescription() {

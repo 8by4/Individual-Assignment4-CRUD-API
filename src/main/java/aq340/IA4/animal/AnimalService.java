@@ -2,6 +2,8 @@ package aq340.IA4.animal;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
@@ -44,13 +46,16 @@ public class AnimalService {
         return animalRepository.getAnimalsBySpecies(species);
     }
 
+    public List<Animal> getAnimalsByString(String string) {
+        return animalRepository.findByNameContaining(string);
+    }
+
     /**
      * Add a new Animal to the database.
      *
      * @param animal the new Animal to add.
      */
-    public void addNewAnimal(Animal animal) {
-        animalRepository.save(animal);
+    public void addNewAnimal(Animal animal) {animalRepository.save(animal);
     }
 
     /**

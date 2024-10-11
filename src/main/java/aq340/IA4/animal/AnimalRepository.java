@@ -14,5 +14,5 @@ public interface AnimalRepository  extends JpaRepository<Animal, Integer> {
 
     List<Animal> getAnimalsBySpecies(String species);
 
-
+    List<Animal> findByNameContaining(String string);
 }

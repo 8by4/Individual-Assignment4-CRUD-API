@@ -52,11 +52,22 @@ public class AnimalController {
         return service.getAnimalsBySpecies(species);
     }
 
+
+    /**
+     * Get a list of Animals based on their name with a string.
+     * http://localhost:8080/animals?search=blue
+     *
+     * @param search the search key.
+     * @return A list of Animal objects matching the string search key.
+     */
+    @GetMapping("/search")
+    public List<Animal> getAnimalsByString(@RequestParam String string) {
+        return service.getAnimalsByString(string);
+    }
+
     /**
      * Create a new Animal entry.
      * http://localhost:8080/animals/new --data '{ "animalId": 4, "name": "sample",
-     *                                    "scientificName": sampleName, "species": "sampleSpecies",
-     *                                    "habitat": "place",
      *                                    "description": "sample desc"}'
      *
      * @param animal the new Animal object.

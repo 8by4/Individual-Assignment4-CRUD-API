@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta charset="UTF-8">
@@ -17,7 +17,7 @@
     <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
         <ul class="nav justify-content-end">
             <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/students/all">Home</a>
+                <a class="nav-link active" aria-current="page" href="/animals/all">Home</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Second</a>
@@ -53,6 +53,35 @@
                 <td data-th-text="${animal.description}"></td>
             </tr>
 
+<!--            <tr>-->
+<!--                <td>Sample Animal Name</td>-->
+<!--                <td>Sample Animal Name</td>-->
+<!--                <td>Sample Animal Name</td>-->
+<!--                <td>Sample Animal Name</td>-->
+<!--                <td>Sample Animal Name</td>-->
+<!--                <td>Sample Animal Name</td>-->
+<!--            </tr>-->
+
+<!--            <tr>-->
+<!--                <td>Sample Animal Name</td>-->
+<!--                <td>Sample Animal Name</td>-->
+<!--                <td>Sample Animal Name</td>-->
+<!--                <td>Sample Animal Name</td>-->
+<!--                <td>Sample Animal Name</td>-->
+<!--                <td>Sample Animal Name</td>-->
+<!--            </tr>-->
+
+<!--            <tr>-->
+<!--                <td>Sample Animal Name</td>-->
+<!--                <td>Sample Animal Name</td>-->
+<!--                <td>Sample Animal Name</td>-->
+<!--                <td>Sample Animal Name</td>-->
+<!--                <td>Sample Animal Name</td>-->
+<!--                <td>Sample Animal Name</td>-->
+<!--            </tr>-->
+
+
+
         </table>
         <button  class="btn btn-outline-primary" onclick="openForm()">Create New Animal Entry</button>
         <form id="new-animal" action="/animals/new" method="post" style="display:none">
@@ -60,7 +89,7 @@
             <input type="text" id="scientificName" name="scientificName" placeholder="Scientific Name"/>
             <input type="text" id="species" name="species" placeholder="Species"/>
             <input type="text" id="habitat" name="habitat" placeholder="Habitat"/>
-            <input type="text" id="description" name="desciption" placeholder="Description"/>
+            <input type="text" id="description" name="description" placeholder="Description"/>
             <button type="submit" class="btn btn-primary">Save</button>
             <button type="reset" class="btn btn-danger" onclick="closeForm()">Cancel</button>
 
@@ -68,11 +97,11 @@
     </div>
     <script>
     function openForm() {
-      document.getElementById("new-student").style.display = "block";
+      document.getElementById("new-animal").style.display = "block";
     }
 
     function closeForm() {
-      document.getElementById("new-student").style.display = "none";
+      document.getElementById("new-animal").style.display = "none";
     }
 
 

@@ -42,6 +42,18 @@ public class Animal {
         this.description = description;
     }
 
+    @Override
+    public String toString() {
+        return "Animal{" +
+                "animalId=" + animalId +
+                ", name='" + name + '\'' +
+                ", scientificName='" + scientificName + '\'' +
+                ", species='" + species + '\'' +
+                ", habitat='" + habitat + '\'' +
+                ", description='" + description + '\'' +
+                '}';
+    }
+
     public Animal() {
     }
 
